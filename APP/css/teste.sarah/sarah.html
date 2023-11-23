@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="sarah.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Produtos-->
+        <div class="Produtos">
+            <div class="imagem">
+                <img src="produto" alt="parte ilustrativa">
+            </div>
+                <div class="texto_prod">
+                    <p> Produto</p>
+                    <h3>Valor em R$</h3>
+                </div>
+        </div>
+    <!--Caso tenha desconto ou o produto esteja em promoção-->
+        <div class="produtos em promo">
+            <div class="imagem">
+                <img src="produto" alt="parte ilustrativa">
+            </div>
+                <div class="texto_prod_promo">
+                 	<p>Produto</p> 
+                        <p class="promo">de <s>R$</s> por:</p>
+                        <h3>R$</h3>
+                </div>
+           </div>
+
+           <div class="formulario">
+            <h1>Formulário de Compra</h1>
+  
+            <nav class="Partedecima">
+              <form id="purchaseForm">
+                <div>
+                  <label for="Nome do produto"></label>
+                    <select name="productName" id="productName">
+                      <option value="produto1">Produto 1</option>
+                      <option value="produto2">Produto 2</option>
+                      <option value="produto3">Produto 3</option>
+                      <option value="produto4">Produto 4</option>
+                    </select>
+                </div>
+              </form>
+          
+              <form action="purchaseForm">
+                <div>
+                  <label for="..."></label>
+                    <select name="..." id="...">
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                    </select>
+                </div>
+          
+              </form>
+          
+              <form action="purchaseForm">
+                <div>
+                  <label for="..."></label>
+                    <select name="..." id="...">
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                    </select>
+                </div>
+          
+              </form>
+          
+              <form action="purchaseForm">
+                <div>
+                  <label for="..."></label>
+                    <select name="..." id="...">
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                      <option value="...">...</option>
+                    </select>
+              </div>
+          
+              </form>
+            <script src="script.js"></script>
+            </nav>
+           </div>
+
+</body>
+</html>
