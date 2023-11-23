@@ -10,7 +10,7 @@
     justify-content: center;
     flex-direction: column;
     background-color: #FFFFFF;
-    width: 480px;
+    width: 470px;
     height: 430px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -27,7 +27,7 @@
 
 .div-titu a {
     position: absolute;
-    right: 480px;
+    right: 450px;
 }
 
 label{
