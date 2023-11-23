@@ -1,0 +1,790 @@
+* {
+    font-family: 'Segoe UI', tahoma, Geneva, verdana, sans-serif;
+}
+
+body {
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.fundo {
+    background-color: rgb(217, 217, 217);
+}
+
+.body2 {
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 0%;
+}
+
+/* Parte que mostra seções em cima do produto */
+.aparente {
+    background-color: black;
+    width: 96%;
+    padding: 2%;
+}
+
+.banheiro {
+    color: black;
+    display: flex;
+    background: #16009C;
+    border-radius: 20px;
+    margin: 1%;
+}
+
+.sala {
+    color: white;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
+    margin: 1%;
+    display: flex;
+}
+
+.cozinha {
+    color: black;
+    display: flex;
+    background-color: rgba(85, 85, 85, 1);
+    border-radius: 20px;
+    margin: 1%;
+}
+
+/* botão que funciona para banheiro e cozinha */
+.botão {
+    background-color: white;
+    padding: 3%;
+    width: 94%;
+    border-radius: 20px;
+}
+
+.botão h4 {
+    margin: 0%;
+}
+
+.lado {
+    text-align: center;
+    width: 50%;
+    padding: 5%;
+    float: right;
+}
+
+.lado h1 {
+    color: rgba(189, 190, 193, 1);
+}
+
+.botão2 {
+    background-color: rgba(38, 70, 6, 1);
+    padding: 3%;
+    width: 94%;
+    border-radius: 20px;
+}
+
+.botão2 h4 {
+    margin: 0%;
+}
+
+
+.sala,
+.cozinha,
+.banheiro {
+    float: inline-start;
+    width: 31%;
+}
+
+.aparente::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Parte do Produto */
+.tudo {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ladolado {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    /* Para empilhar as divs do produto clicavél verticalmente */
+    margin-left: 5%;
+
+}
+
+/* .variação1,
+.variação2,
+.variação3,
+.variação4 {
+    margin-bottom: 10px;
+    espaçamento entre as divs 
+} */
+
+.Imagem_inicial {
+    width: 55%;
+    margin-left: 8%;
+    /* Adapte conforme necessário para o espaçamento desejado entre as divs */
+}
+
+.produtonome h1 {
+    text-align: center;
+    margin: 0%;
+
+    font-size: 50px;
+    line-height: 200%;
+    letter-spacing: -0.05em;
+    color: #000000;
+
+
+}
+
+/* Adicione estas regras CSS para definir as bordas */
+.variação1,
+.variação2,
+.variação3,
+.variação4 {
+
+    border: 1px solid #ccc;
+    /* Borda cinza */
+    margin: 5%;
+    /* Espaçamento entre as variações */
+    cursor: pointer;
+    /* Cursor ao passar por cima para indicar clicabilidade */
+    padding: 20%;
+}
+
+.variação1.selecionado,
+.variação2.selecionado,
+.variação3.selecionado,
+.variação4.selecionado {
+    border: 2px solid #00f;
+    /* Borda azul quando selecionado */
+}
+
+.preços_produto {
+    width: 20%;
+    padding: 5%;
+    margin-right: 3%;
+    background-color: rgba(217, 217, 217, 0.2);
+    border-radius: 20px;
+
+}
+
+
+/* Adicione este estilo para destacar estrelas selecionadas */
+.estrelas {
+    display: flex;
+    cursor: pointer;
+}
+
+.estrela {
+    font-size: 25px;
+    margin-right: 5px;
+    transition: color 0.3s;
+}
+
+.estrela:hover,
+.estrela.selecionada {
+    color: #FFD700;
+}
+
+.avaliacoes {
+    /* margin: 20px auto; */
+    background-color: #fff;
+    padding: 20px;
+    /* border-radius: 8px; */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.avaliacoes h2,
+.formulario-container h3 {
+    color: #333;
+}
+
+.formulario {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.estrelas {
+    display: flex;
+    cursor: pointer;
+}
+
+.estrela {
+    font-size: 25px;
+    margin-right: 5px;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.estrela:hover,
+.estrela.selecionada {
+    color: #FFD700;
+}
+
+#mostrarFormulario {
+    width: 100%;
+    background-color: gold;
+    color: #fff;
+    padding: 10px 0px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button .coment :hover {
+    background-color: #45a049;
+}
+
+#comentarios {
+    margin-top: 20px;
+
+    clear: both;
+}
+
+.comentario {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+
+}
+
+.comentario strong {
+    color: #333;
+}
+
+.comentario br {
+    display: none;
+}
+
+/* Adicione este estilo para esconder o formulário de sobreposição inicialmente */
+
+.formulario-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* inicio da Table */
+
+table.distancia {
+    border-collapse: collapse;
+    width: 100%;
+
+}
+
+.distancia th,
+td {
+    text-align: left;
+
+}
+
+.distancia td {
+    border-radius: 0px 10px 10px 0px;
+}
+
+.distancia th {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.cor-fundo {
+    background-color: rgba(0, 0, 0, 0.575);
+    color: white;
+    border-radius: 100% !important;
+}
+
+table h3,
+h4 {
+    margin: 1%;
+    margin-left: 5%;
+    height: auto;
+}
+
+.info {
+    width: 90%;
+    margin: 5%;
+}
+
+.info h1 {
+    text-align: center;
+}
+
+div .cores {
+    width: 100%;
+}
+
+
+div .cores::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+div .prod1 p,
+.prod2 p,
+.prod3 p {
+    font-style: normal;
+    font-size: 20px;
+    color: #000000;
+}
+
+.prod1,
+.prod2,
+.prod3 {
+    float: inline-start;
+    width: 25%;
+    margin: 2%;
+    text-align: center;
+    margin-left: 6%;
+}
+
+div .prod1 a,
+.prod2 a,
+.prod3 a {
+    text-decoration: none;
+}
+
+.preçopromo {
+    font-family: 'Arial Black';
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    text-decoration-line: line-through;
+    color: #871E1E;
+}
+
+.preçopromo2 {
+
+    font-family: 'Arial Black';
+    font-style: normal;
+    font-size: 22px;
+    text-align: center;
+    color: #148712;
+}
+
+.desejo {
+    background-color: rgba(255, 255, 0, 0.781);
+    width: 100%;
+    margin-top: 4%;
+    padding: 3%;
+}
+
+.WhatsApp {
+    background-color: #25D366;
+    width: 100%;
+    margin-top: 4%;
+    padding: 3%;
+}
+
+.localização {
+    background-color: rgba(61, 60, 60, 0.692);
+    width: 100%;
+    margin-top: 4%;
+    padding: 3%;
+}
+
+div .WhatsApp,
+div .desejo,
+div .localização {
+    border-radius: 7px;
+}
+
+div .localização a,
+.WhatsApp a,
+.desejo a {
+    text-decoration: none;
+    color: #000000;
+}
+
+div .localização p,
+.WhatsApp p,
+.desejo p {
+    margin: 0%;
+}
+
+/* div .t_icon1,
+div .icon_prod1,
+div .t_icon2,
+div .icon_prod2,
+div .t_icon3,
+div .icon_prod3 {
+    display: flex;
+    align-items: center;
+} */
+
+div .t_icon1,
+div .t_icon2,
+div .t_icon3 {
+    width: 90%;
+}
+
+div .icon_prod3,
+div .icon_prod2,
+div .icon_prod1 {
+    width: 10%;
+    /* margin: 10%; */
+    text-align: center;
+}
+
+div .bot_clicavel3,
+div .bot_clicavel2,
+div .bot_clicavel {
+    width: 100%;
+    /* margin-top: 10%; */
+    text-align: center;
+    /* padding: 3%; */
+    display: flex;
+    font-size: 1.3em;
+}
+
+div .recomend {
+    width: 19%;
+    background-color: rgb(217, 217, 217);
+    padding: 1.5%;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+div .coment_viwer {
+    margin-left: 2%;
+    width: 75%;
+}
+
+div .recomend,
+div .coment_viwer {
+    float: inline-start;
+}
+
+div .avaliacoes::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+div .geral_nota {
+    border-radius: 10px;
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.192);
+}
+
+div .nota_text {
+    background-color: rgba(218, 165, 32, 0.733);
+    border-radius: 10px 10px 0px 0px;
+}
+
+div .nota_text h3 {
+    margin-bottom: 0%;
+}
+
+/* .nota_nota{
+    width: 5%;
+margin-top: 0%;
+margin-bottom: 0%;
+} */
+div.nota_coment {
+    padding-bottom: 5%;
+    background-color: rgba(217, 217, 217, 0.28);
+}
+
+div .nota_coment .linha_reta {
+    width: 50%;
+}
+.letrinha{
+    font-size: 15px;
+}
+
+.nota_coment h3 {
+    margin: 0%;
+}
+
+div .star_01 {
+    color: gold;
+    font-size: 200%;
+}
+
+div .filtro {
+    text-decoration: none;
+    text-align: left;
+    margin-top: 15%;
+}
+
+
+div .ava h4 {
+    font-size: 99%;
+    margin: 5% 0;
+}
+
+div .recomendacao_sim {
+    width: 40%;
+    background-color: #45a049;
+    color: white;
+    padding: 0% 5%;
+    font-size: 15px;
+}
+
+div .recomendacao_sim p {
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    height: 0%;
+}
+
+div .recomendacao_nao {
+    width: 40%;
+    background-color: #871E1E;
+    color: white;
+    padding: 0% 5%;
+    font-size: 15px;
+    margin-left: 10%;
+
+}
+
+div .recomedacao_lado {
+    width: 90%;
+    height: 1%;
+    display: flex;
+}
+
+/* barra de procentagem */
+.clicavél_star {
+    /* width: 15%; */
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 2%;
+}
+
+.star-tudo {
+    width: 100%;
+    display: flex;
+    margin: 5% 0;
+}
+
+.botton_star {
+    display: flex;
+
+}
+
+.star_color {
+    color: #80a045;
+    align-items: center;
+    width: 50%;
+}
+
+.botton_star p {
+    text-align: center;
+    width: 50%;
+    position: static;
+}
+
+.custom-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.star {
+    margin-left: 5px;
+    color: #f39c12;
+}
+
+/* barrinnha de porcentagem de cada estrela */
+.progress-barrinha5 {
+    width: 75%;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    height: 30px;
+    position: relative;
+    border-radius: 17px;
+    margin-left: 5%;
+}
+
+.progress-bar5 {
+    width: 70%;
+    height: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    border-radius: 17px;
+}
+.progress-barrinha4 {
+    width: 75%;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    height: 30px;
+    position: relative;
+    border-radius: 17px;
+    margin-left: 5%;
+  }
+  .progress-bar4 {
+    width: 43%; 
+    height: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    border-radius: 17px;
+  }
+  .progress-barrinha3 {
+    width: 75%;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    height: 30px;
+    position: relative;
+    border-radius: 17px;
+    margin-left: 5%;
+  }
+  .progress-bar3 {
+    width: 39%; 
+    height: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    border-radius: 17px;
+  }
+  .progress-barrinha2 {
+    width: 75%;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    height: 30px;
+    position: relative;
+    border-radius: 17px;
+    margin-left: 5%;
+  }
+  .progress-bar2 {
+    width: 35%; 
+    height: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    border-radius: 17px;
+  }
+  .progress-barrinha1 {
+    width: 75%;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    height: 30px;
+    position: relative;
+    border-radius: 17px;
+    margin-left: 5%;
+  }
+  .progress-bar1 {
+    width: 25%; 
+    height: 100%;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    border-radius: 17px;
+  }
+
+ /* container da imagem e comentário do usuario */
+ .comment-container {
+    margin-bottom: 1%;
+    background-color: rgba(217, 217, 217, 1);
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 96%;
+    border-radius: 17px;
+}
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.name_star{
+    width: 90%;
+}
+.user-name {
+    font-weight: bold;
+
+}
+
+.star-rating {
+    color: #ffd700; /* Cor amarela para estrelas */
+}
+
+.comment-text {
+    font-size: 14px;
+    padding: 2% 10%;
+    background-color: white;
+    border-radius: 17px;
+}
+.like-button {
+    background-color: #3498db; /* Cor azul para o botão de curtir */
+    color: #fff; /* Cor do texto no botão */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
