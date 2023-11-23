@@ -25,11 +25,6 @@
     align-items: center;
 }
 
-.div-titu a {
-    position: absolute;
-    right: 450px;
-}
-
 label{
     display: flex;
 }
@@ -103,4 +98,17 @@ input{
 h1{
     font-weight: 400;
     
+}
+
+.img-x{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-x a {
+    position: absolute;
+    right: 460px;
 }
