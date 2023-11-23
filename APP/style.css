@@ -1,0 +1,106 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.div-main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 480px;
+    height: 430px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 50px auto;
+}
+.div-titu{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-titu a {
+    position: absolute;
+    right: 480px;
+}
+
+label{
+    display: flex;
+}
+
+
+.div-text-baixo{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 17px;
+    width: 400px;
+}
+
+#butao button{
+    width: 360px; /* Definindo a largura do botão */
+    height: 54px; /* Definindo a altura do botão */
+    background-color: #1424B0; /* Definindo a cor de fundo do botão (verde neste exemplo) */
+    color: white; /* Definindo a cor do texto do botão como branco */
+    border: none; /* Removendo a borda do botão */
+    text-align: center; /* Centralizando o texto dentro do botão */
+    text-decoration: none; /* Removendo a decoração de texto, como sublinhado */
+    display: inline-block; /* Definindo o tipo de exibição como bloco em linha */
+    font-size: 20px; /* Definindo o tamanho da fonte */
+    margin: 4px 2px; /* Adicionando margens */
+    cursor: pointer; /* Mudando o cursor para indicar que o botão é clicável */
+    border-radius: 8px; /* Adicionando bordas arredondadas */
+    margin-top: 15px;
+}
+
+.login-cliente{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.div-email{
+    margin-top: 15px;
+}
+
+.content-senha{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    color: black;
+}
+
+.content-senha{
+    display: flex;
+    flex-direction: row;
+    gap: 235px;
+}
+
+
+.content-senha a {
+    color: black;
+
+}
+
+.content-senha a:active{
+    color: black;
+}
+
+input{ 
+    width: 355px;
+    height: 33px;
+    border-radius: 5px; 
+    border: 2px solid #11156C;
+    outline-style: none;
+}
+
+h1{
+    font-weight: 400;
+    
+}
