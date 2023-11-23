@@ -106,9 +106,7 @@ h1{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    position: relative;
+    right: 0;
 }
 
-.img-x a {
-    position: absolute;
-    right: 460px;
-}
