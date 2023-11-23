@@ -11,30 +11,25 @@
 </head>
 
 <body>
+    <!-- fundo com o tom cinza que fica atras do body2 -->
     <div class="fundo">
-        <div class="aparente">
-            <a href="#" class="link">
+        <div class="aparente"> <!--div com banheiro, sala e cozinha do topo do site -->
+            <a href="#">
                 <div class="banheiro">
 
                     <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40 (1).png" alt="Toalha Branca" width="50%">
 
                     <div class="lado">
                         <h1>Banheiro</h1>
-                        <div class="botão">
+                        <div class="botão"> <!--este botão funciona tmbém para o botão da div cozinha-->
                             <h4>Comprar</h4>
                         </div>
                     </div>
                 </div>
             </a>
-
-
-            <a href="#" class="link">
+            <a href="#">
                 <div class="sala">
-
-
                     <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40 (2).png" alt="Sofá Verde" width="50%">
-
-
                     <div class="lado">
                         <h1>Sala</h1>
                         <div class="botão2">
@@ -43,8 +38,7 @@
                     </div>
                 </div>
             </a>
-
-            <a href="#" class="link">
+            <a href="#">
                 <div class="cozinha">
 
                     <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40_resized.png" alt="Fogão" width="50%">
@@ -58,15 +52,14 @@
                 </div>
             </a>
         </div>
-
+        <!-- fundo da pagina aonde vai conter o corpo do site-->
         <div class="body2">
-
             <div class="produtonome">
                 <h1>Geladeira Frost Free 443 litros - Inox 110v </h1>
             </div>
             <div class="tudo">
                 <div class="ladolado">
-
+                    <!-- scripts que fazem imagens mudar de lugar-->
                     <div class="variação1" onclick="mudarImagem('Assets/geladeira.png')">
                         <img src="Assets/geladeira.png" alt="Produto" width="100%">
                     </div>
@@ -81,6 +74,7 @@
                         <img src="Assets/lados_resized.png" alt="Produto" width="100%">
                     </div>
                 </div>
+                <!-- imagem principal quando for carregar o site-->
                 <div class="Imagem_inicial">
                     <img id="imagemPrincipal" src="Assets/geladeira.png" alt="Produto" width="70%" class="imagem1">
                 </div>
@@ -88,9 +82,8 @@
                     <div>
                         <h1>Cores:</h1>
                     </div>
-                    <div class="cores">
+                    <div class="cores"> <!-- variação do produto com cor-->
                         <div class="prod1">
-
                             <a href="#">
                                 <img src="Assets/geladeira - Azul.png" alt="gelradeia 4 Portas" width="100%">
 
@@ -111,30 +104,29 @@
                                 <p>Rosa</p>
                             </a>
                         </div>
-
                     </div>
+                    <!--preço do produto-->
                     <div>
                         <div class="preçopromo">de R$ 2.947,00</div>
                         <div class="preçopromo2"> Por R$ 2.500,00</div>
                     </div>
+                    <!--otões de interação, de adicionar a ista,whatsapp e frete-->
                     <div class="botão_prod">
                         <div class="desejo">
                             <a href="#" class="bot_clicavel">
                                 <div class="icon_prod1" width="100%">
-                                    <i class="fas fa-heart" style="color: red;"></i>
+                                    <i class="fas fa-heart" style="color: red;"></i><!--Icone do coração-->
                                 </div>
                                 <div class="t_icon1">
                                     <p>Lista de desejos</p>
                                 </div>
                             </a>
                         </div>
-
-
                         <div class="WhatsApp">
                             <a href="#" class="bot_clicavel2">
                                 <div class="icon_prod2">
                                     <i class="fab fa-whatsapp"
-                                        style="color: white;"></i><!-- Ícone de carrinho de compras -->
+                                        style="color: white;"></i><!-- Ícone de carrinho do whatsApp-->
 
                                 </div>
                                 <div class="t_icon2">
@@ -146,8 +138,7 @@
                             <a href="#" class="bot_clicavel3">
                                 <div class="icon_prod3">
                                     <i class="fas fa-map-marker-alt"
-                                        style="color: #4285F4;"></i><!-- Importando o Ícone de localização -->
-
+                                        style="color: #4285F4;"></i><!-- Ícone de localização -->
                                 </div>
                                 <div class="t_icon3">
                                     <p>Calcular frete</p>
@@ -157,12 +148,11 @@
                     </div>
                 </div>
             </div>
-
+            <!--Table com informações e descrição do produto-->
             <div class="info">
                 <h1>Informações do Produto</h1>
                 <table class="distancia">
                     <tr class="cor-fundo">
-
                         <th>
                             <h3>Tipo de Degelo</h3>
                         </th>
@@ -207,17 +197,16 @@
                     </tr>
                 </table>
             </div>
-
+            <!--campo das Avaliações-->
             <div class="avaliacoes">
-
                 <h2>Avaliações de Produtos</h2>
                 <div class="recomend">
-
                     <button id="mostrarFormulario" onclick="exibirFormulario()">Fazer Avaliação</button>
                     <div class="formulario-overlay" id="formularioOverlay">
                         <div class="formulario-container">
                             <span class="fechar" onclick="fecharFormulario()">&times;</span>
                             <h3>Deixe sua Avaliação</h3>
+                            <!--formulário que será escondido -->
                             <form>
                                 <label for="nome">Nome:</label>
                                 <input type="text" id="nome" required>
@@ -236,10 +225,11 @@
                                 <label for="comentario">Comentário:</label>
                                 <textarea id="comentario" rows="4" required></textarea>
 
-                                <button type="button" onclick="adicionarComentario()">Enviar Avaliação</button>
+                                <button type="button" class="coment" onclick="adicionarComentario()">Enviar Avaliação</button>
                             </form>
                         </div>
                     </div>
+                    <!-- container com notas gerais sobre produto-->
                     <div class="geral_nota">
                         <div class="nota_text">
                             <h3>Nota</h3>
@@ -255,12 +245,12 @@
 
                         </div>
                     </div>
+                    <!-- filtro de avaliações por estrela-->
                     <div class="filtro">
                         <h4>filtrar por:</h4>
                         <hr>
-
-
-
+                        <!-- botão com as estrelas w barrinha de porcentagem-->
+                        <!--ops: as divs se repetem e mudam só a informação-->
                         <div class="star-tudo">
                             <button class="custom-button">
                                 5
@@ -269,9 +259,7 @@
                             <div class="progress-barrinha5">
                                 <div class="progress-bar5">56.5%</div>
                             </div>
-
                         </div>
-
                         <div class="star-tudo">
                             <button class="custom-button">
                                 4
@@ -280,9 +268,7 @@
                             <div class="progress-barrinha4">
                                 <div class="progress-bar4">24.6%</div>
                             </div>
-
                         </div>
-
                         <div class="star-tudo">
                             <button class="custom-button">
                                 3
@@ -291,9 +277,7 @@
                             <div class="progress-barrinha3">
                                 <div class="progress-bar3">13.2%</div>
                             </div>
-
                         </div>
-
                         <div class="star-tudo">
                             <button class="custom-button">
                                 2
@@ -302,31 +286,20 @@
                             <div class="progress-barrinha2">
                                 <div class="progress-bar2">3.1%</div>
                             </div>
-
                         </div>
-
                         <div class="star-tudo">
                             <button class="custom-button">
                                 1
-                                <div class="star">&#9733;</div>
+                                <div class="star">
+                                    &#9733;
+                                </div>
                             </button>
                             <div class="progress-barrinha1">
                                 <div class="progress-bar1">2.7%</div>
                             </div>
-
                         </div>
-
-
-
-
-
-
-
-
-
-
-
                     </div>
+                    <!--recomendação do produto prara outros usuarios-->
                     <div class="ava">
                         <h4>recomendação do Produto: </h4>
                         <div class="recomedacao_lado">
@@ -341,86 +314,84 @@
                         </div>
                     </div>
                 </div>
-
+                <!--comentário fixo de exemplo-->
                 <div class="coment_viwer">
                     <div id="comentarios">
                     </div>
+                    <!-- pessoa 1 -->
                     <div class="comment-container">
                         <div class="user-info">
+                            <!--imagem do perfil do usuario-->
                             <img class="user-photo" src="Assets/valéria.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">valéria Almeida</div>
+                                <!--avaliação em estrela-->
                                 <div class="star-rating">★★★★★</div>
-                                <!-- Adicione as estrelas dinamicamente com JavaScript, se necessário -->
                             </div>
                             <button class="like-button">👍</button>
                         </div>
+                        <!--aonde vai ficar o comentário do usuario-->
                         <div class="comment-text">
-                            <!-- Comentário do usuário -->
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
                             consequat. Duis vel condimentum quam.
                         </div>
                     </div>
+                    <!-- pessoa 2 -->
                     <div class="comment-container">
                         <div class="user-info">
                             <img class="user-photo" src="Assets/Agatha-Nunes.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Agatha Nunes</div>
                                 <div class="star-rating">★★★★★</div>
-                                <!-- Adicione as estrelas dinamicamente com JavaScript, se necessário -->
                             </div>
                             <button class="like-button">👍</button>
                         </div>
                         <div class="comment-text">
-                            <!-- Comentário do usuário -->
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
                             consequat. Duis vel condimentum quam.
                         </div>
                     </div>
+                    <!-- pessoa 3 -->
                     <div class="comment-container">
                         <div class="user-info">
                             <img class="user-photo" src="Assets/Ygona Moura.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Ygona Moura</div>
                                 <div class="star-rating">★★★★★</div>
-                                <!-- Adicione as estrelas dinamicamente com JavaScript, se necessário -->
                             </div>
                             <button class="like-button">👍</button>
                         </div>
                         <div class="comment-text">
-                            <!-- Comentário do usuário -->
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
                             consequat. Duis vel condimentum quam.
                         </div>
                     </div>
+                    <!-- pessoa 4 -->
                     <div class="comment-container">
                         <div class="user-info">
                             <img class="user-photo" src="Assets/luiz.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Luiz Augusto</div>
                                 <div class="star-rating">★★★★★</div>
-                                <!-- Adicione as estrelas dinamicamente com JavaScript, se necessário -->
                             </div>
                             <button class="like-button">👍</button>
                         </div>
                         <div class="comment-text">
-                            <!-- Comentário do usuário -->
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
                             consequat. Duis vel condimentum quam.
                         </div>
                     </div>
+                    <!-- pessoa 5 -->
                     <div class="comment-container">
                         <div class="user-info">
                             <img class="user-photo" src="Assets/MAnoel-Gomes.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Manoel Gomes</div>
                                 <div class="star-rating">★★★★★</div>
-                                <!-- Adicione as estrelas dinamicamente com JavaScript, se necessário -->
                             </div>
                             <button class="like-button">👍</button>
                         </div>
                         <div class="comment-text">
-                            <!-- Comentário do usuário -->
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
                             consequat. Duis vel condimentum quam.
                         </div>
