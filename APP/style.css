@@ -356,7 +356,7 @@ div .coment_viwer {
     color: #333;
 }
 
-.formulario-overlay {
+ .formulario-overlay {
     z-index: 1; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa */
     display: none;
     position: fixed;
@@ -402,7 +402,15 @@ div .coment_viwer {
     color: #FFD700;
 }
 
-input[type="text"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    
+}
 textarea {
     width: 100%;
     padding: 10px;
@@ -410,8 +418,13 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
+    height: 100px; /* Defina a altura desejada aqui */
+    overflow-y:auto;
+    resize: none; /*retirando o pinguelo do textarea*/
 }
-
+textarea:focus {
+    outline: none; /* Remove a borda pretona de foco */
+}
 label {
     display: block;
     margin-bottom: 5px;
@@ -720,6 +733,8 @@ div .coment_viwer {
     padding: 2% 10%;
     background-color: white;
     border-radius: 17px;
+    word-wrap: break-word;
+
 }
 
 .like-button {
@@ -732,3 +747,5 @@ div .coment_viwer {
     border-radius: 5px;
     cursor: pointer;
 }
+/* testando design */
+
