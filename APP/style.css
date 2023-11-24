@@ -357,6 +357,7 @@ div .coment_viwer {
 }
 
 .formulario-overlay {
+    z-index: 1; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa */
     display: none;
     position: fixed;
     top: 0;
@@ -456,6 +457,7 @@ div .geral_nota {
 
 /* filtragem com estrela e barrinha de porcentagem */
 div .filtro {
+    z-index: 2; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
     text-decoration: none;
     text-align: left;
     margin-top: 15%;
