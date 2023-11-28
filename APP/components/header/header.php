@@ -1,13 +1,9 @@
-
-<body>
-    <header>
-        <link rel="stylesheet" href="./components/header/header.css?v=<?php echo time(); ?>">
+<header>
+       <link rel="stylesheet" href="./components/header/header.css?v=<?php echo time(); ?>">
        <div id="top-header">
             <p>Loja De Eletrodomésticos em Barreiras Centro, Barreiras - BA</p>
        </div>
        <div id="central-header" >
-            
-            
             <div id="components-central">
             
                 <div id="logo-header"><img src="./components/header/logo.png" alt="logo" id="logo"></div>

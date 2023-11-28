@@ -1,6 +1,8 @@
-
+    <head>
+        <link rel="stylesheet" href="./components/footer/Footer.css?v=<?php echo time(); ?>">
+    </head>
     <footer id="container-footer">
-        <link rel="stylesheet" href="Footer.css">
+       
         <!-- sec de endereco -->
         
         <section class="sections" id="section-endereco">
@@ -21,23 +23,23 @@
                 <p>Redes Sociais</p>
                 <div id="container-contato-svg">
                     <picture id="x">
-                        <img class="svg-contato" src="assets/X.svg" alt="img X (antigo twitter)">
+                        <img class="svg-contato" src="./components/footer/assets/X.svg" alt="img X (antigo twitter)">
                     </picture>
                     <picture id="Instagram">
-                        <img class="svg-contato" src="assets/insta.svg" alt="img instagram">
+                        <img class="svg-contato" src="./components/footer/assets/insta.svg" alt="img instagram">
                     </picture>
                     <picture id="Facebook">
-                        <img class="svg-contato" src="assets/face.svg" alt=" img facebook">
+                        <img class="svg-contato" src="./components/footer/assets/face.svg" alt=" img facebook">
                     </picture>
                 </div>
                 <div id="card2-contatos">
                     <h3>Telefone/e-mail</h3>
                     <picture>
-                        <img src="assets/telefone.svg" alt="">
+                        <img src="./components/footer/assets/telefone.svg" alt="">
                         <label><a href="">xx-xxxxxxxx</a></label>
                     </picture>
                     <picture>
-                        <img src="assets/mail.svg" alt="">
+                        <img src="./components/footer/assets/mail.svg" alt="">
                         <label><a href="mailto:xx@allianca.com">xx@allianca.com</a></label>
                     </picture>
                 </div>
@@ -49,11 +51,11 @@
             <div id="card1-atendimento">
                 <h3>Formas de pagamento</h3>
                 <div id="svg-formasPag"> 
-                    <img src="assets/elo.svg" alt="">
-                    <img src="assets/mastercard.svg" alt="">
-                    <img src="assets/visa.svg" alt="">
-                    <img src="assets/boleto.svg" alt="">
-                    <img src="assets/pix.svg" alt="">
+                    <img src="./components/footer/assets/elo.svg" alt="">
+                    <img src="./components/footer/assets/mastercard.svg" alt="">
+                    <img src="./components/footer/assets/visa.svg" alt="">
+                    <img src="./components/footer/assets/boleto.svg" alt="">
+                    <img src="./components/footer/assets/pix.svg" alt="">
                 </div>
             </div>
             <div id="card2-atendimento">
@@ -61,23 +63,23 @@
                 <div id="links-card2">
                     <ul>
                         <li>
-                            <img src="assets/headset.svg" alt="">
+                            <img src="./components/footer/assets/headset.svg" alt="">
                             <label for=""><a href="#">Nossos canais de atendimento</a></label>
                         </li>
                         <li>
-                            <img src="assets/lupa.svg" alt="">
+                            <img src="./components/footer/assets/lupa.svg" alt="">
                             <label for=""><a href="#">Troca e Devoluções</a></label>
                         </li>
                         <li>
-                            <img src="assets/box.svg" alt="">
+                            <img src="./components/footer/assets/box.svg" alt="">
                             <label for=""><a href="#">Meus Pedidos</a></label>
                         </li>
                         <li>
-                            <img src="assets/boleto.svg" alt="">
+                            <img src="./components/footer/assets/boleto.svg" alt="">
                             <label for=""><a  href="#">2º Via de Boleto</a></label>
                         </li>
                         <li>
-                            <img src="assets/rule-svgrepo-com.svg" alt="">
+                            <img src="./components/footer/assets/rule-svgrepo-com.svg" alt="">
                             <label for=""><a href="#">Regras e Promoções</a></label>
                         </li>
                     </ul>
@@ -86,5 +88,4 @@
         </section>
 
     </footer>
-</body>
 </html>
