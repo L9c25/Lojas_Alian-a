@@ -46,10 +46,6 @@ label{
     margin-top: 15px;
 }
 
-.div-nome{
-    
-}
-
 input{
     width: 355px;
     height: 33px;
@@ -60,4 +56,14 @@ input{
 
 h2{
     font-weight: 400;
+}
+
+.div-img{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 0;
 }
