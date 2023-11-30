@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ojas Alliança - Loja de Eletrodomésticos em Barreiras, Bicicletas, Celulares, Promoção em Barreiras, Menor Preço em Barreiras - Loja De Eletrodomésticos em Bairro Centro, Barreiras - BA</title>
+	<title>Lojas Alliança - Loja de Eletrodomésticos em Barreiras, Bicicletas, Celulares, Promoção em Barreiras, Menor Preço em Barreiras - Loja De Eletrodomésticos em Bairro Centro, Barreiras - BA</title>
 	<!-- import slick css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
 		integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
