@@ -25,9 +25,11 @@ require "./controllers/prodController.php";
 						foreach ($dados as $p):
 							?>
 							<div class="product">
-								<div class="produc-image" style="background-image: 
-									url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
-								</div>
+								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+									<div class="produc-image" style="background-image:
+										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
+									</div>
+								</a>
 								<div class="info-product">
 									<h3>
 										<?php echo ($p->getNome()) ?>
@@ -68,9 +70,11 @@ require "./controllers/prodController.php";
 						foreach ($dados as $p):
 							?>
 							<div class="product">
-								<div class="produc-image" style="background-image: 
-									url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
-								</div>
+								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+									<div class="produc-image" style="background-image:
+										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
+									</div>
+								</a>
 								<div class="info-product">
 									<h3>
 										<?php echo ($p->getNome()) ?>
@@ -110,9 +114,11 @@ require "./controllers/prodController.php";
 						foreach ($dados as $p):
 							?>
 							<div class="product">
-								<div class="produc-image" style="background-image: 
-									url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
-								</div>
+								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+									<div class="produc-image" style="background-image:
+										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
+									</div>
+								</a>
 								<div class="info-product">
 									<h3>
 										<?php echo ($p->getNome()) ?>
@@ -153,9 +159,11 @@ require "./controllers/prodController.php";
 						foreach ($dados as $p):
 							?>
 							<div class="product">
-								<div class="produc-image" style="background-image: 
-									url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
-								</div>
+								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+									<div class="produc-image" style="background-image:
+										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
+									</div>
+								</a>
 								<div class="info-product">
 									<h3>
 										<?php echo ($p->getNome()) ?>
