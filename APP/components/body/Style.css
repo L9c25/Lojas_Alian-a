@@ -1,0 +1,158 @@
+/* reset do css */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: #e6e0d1;
+}
+/* imagem do card principal */
+.img-card {
+	width: 100%;
+	height: 500px;
+	background-color: aliceblue;
+
+	background-image: url("./Assets/img/CARD.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.section-produtos {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	width: 80%;
+	height: 150em;
+
+	margin-top: 10px;
+
+	background-color: rgb(255, 255, 255);
+	
+	box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
+}
+/* -- inicio swiper slider dos produtos --*/
+.content{
+	margin-bottom: 80px;
+}
+
+.tile-category {
+	display: flex;
+	margin: 15px 0px 20px 8%;
+}
+
+.img-emoji{
+	display: flex;
+	width: 30px;
+	height: 30px;
+	margin-right: 15px;
+
+	background-size: cover;
+}
+
+.carrosel{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	/* background-color: blue; */
+}
+.swiper-slider-products{
+	display: flex !important;
+	justify-content: center;
+	width: 80%;
+	gap: 17px;
+	/* background-color: red; */
+}
+
+.product{
+	width: 278px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.info-product{
+	width: 278px;
+	margin-top: 20px;
+}
+
+.info-product h3 {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	
+}
+
+.produc-image {
+	width: 278px;
+	height: 278px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-color: white;
+	border-radius: 4px;
+	box-shadow: 2px 6px 10px 0px rgba(0, 0, 0, 0.3) !important;
+	cursor: pointer;
+}
+
+.rating-product {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.rating{
+	display: flex;
+	float: left;
+	margin-right: 20px;
+	font-size: 25px;
+	color: rgb(255,226,0);
+	margin: 7px 10px 7px 0px;
+}
+
+.origin-price {
+	color: #871e1e;
+	font-weight: 500;
+	text-align: center;
+}
+.container-descount{
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	margin-top: 15px;
+}
+.descount-price{
+	text-align:	center;
+	font-size: 25px;
+	font-weight: 500;
+	margin-right: 7px;
+}
+
+.text-info{
+	color: #7e7e7e;
+	font-weight: 500;
+}
+
+/*--fim swiper slider dos produtos --*/
+
+
+
+/* tentativa das flechas next e preview */
+/* .privArrow,.nextArrow {
+	width: 100px;
+	height: 100px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+	background-color: rgb(111, 176, 143);
+} */
