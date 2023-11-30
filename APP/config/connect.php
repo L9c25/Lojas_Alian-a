@@ -5,13 +5,12 @@ $host = 'localhost';
 $banco = 'alianca';
 $user = 'root';
 $pass = '';
-$porta = '3307';
+$porta = '3306';
 
 try {
-$pdo = new PDO("mysql:dbname=".$banco.";port=".$porta.";host=".$host,$user,$pass);
-
+    $pdo = new PDO("mysql:dbname=".$banco.";port=".$porta.";host=".$host,$user,$pass);
 } catch (Exception $e) {
-    die("erro: ".$e->getMessage()."deu merda!");
+    die("erro: ".$e->getMessage());
 }
 
 /*$nome = 'nome';

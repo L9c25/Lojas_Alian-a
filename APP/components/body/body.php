@@ -1,3 +1,8 @@
+<?php 
+	require "./config/connect.php";
+	require "./controllers/prodController.php";
+?>
+
 <body>
 	<link rel="stylesheet" href="./components/body/Style.css">
 	<div class="img-card"></div>
@@ -14,28 +19,28 @@
 					<div class="swiper-slider-products js-swiper-slider">
 		
 						<?php
-							for ($i=0; $i<10; $i++):
+							$d = new daoMysql($pdo);
+							$dados = $d->listar();
+							foreach ($dados as $p):
 						?>
 							<div class="product">
-							<div class="produc-image" style="background-image: url('./components/body/Assets/img/Sofa_brabo.webp');">
-							</div>
-							<div class="info-product">
-								<h3>Sofá sala de estar Compact
-									1,50m Tecido</h3>
-								<div class="rating-product">
-									<p class="rating">
-										&#9733&#9733&#9733&#9733&#9733
-									</p>
-									<p class="avaliantions">999</p>
+								<div class="produc-image" style="background-image: 
+									url('./components/body/Assets/img/<?php echo($p->getImg())?>');">
 								</div>
-								<p class="origin-price"><i>R$ 3.299,00</i></p>
-								<span class="descount-price-product">
-									<p class="descount-price">R$ 2.969,10</p>
-									<p class="text-info">no pix</p>
-								</span>
+								<div class="info-product">
+									<h3><?php echo($p->getNome())?></h3>
+									<div class="rating-product">
+										<p class="rating">&#9733&#9733&#9733&#9733&#9733</p>
+										<p class="avaliantions">999</p>
+									</div>
+									<p class="origin-price"><i>R$ <?php echo($p->getPreco())?></i></p>
+									<span class="container-descount">
+										<p class="descount-price">R$ <?php echo($p->getPreco() * 0.9)?></p>
+										<p class="text-info">no pix</p>
+									</span>
+								</div>
 							</div>
-						</div>
-						<?php endfor?>
+						<?php endforeach?>
 					</div>
 				</div>
 			</div>
@@ -65,7 +70,7 @@
 									<p class="avaliantions">999</p>
 								</div>
 								<p class="origin-price"><i>R$ 3.299,00</i></p>
-								<span class="descount-price-product">
+								<span class="container-descount">
 									<p class="descount-price">R$ 2.969,10</p>
 									<p class="text-info">no pix</p>
 								</span>
@@ -102,7 +107,7 @@
 									<p class="avaliantions">999</p>
 								</div>
 								<p class="origin-price"><i>R$ 3.299,00</i></p>
-								<span class="descount-price-product">
+								<span class="container-descount">
 									<p class="descount-price">R$ 2.969,10</p>
 									<p class="text-info">no pix</p>
 								</span>
@@ -138,7 +143,7 @@
 									<p class="avaliantions">999</p>
 								</div>
 								<p class="origin-price"><i>R$ 3.299,00</i></p>
-								<span class="descount-price-product">
+								<span class="container-descount">
 									<p class="descount-price">R$ 2.969,10</p>
 									<p class="text-info">no pix</p>
 								</span>

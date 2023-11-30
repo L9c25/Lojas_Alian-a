@@ -14,7 +14,6 @@
 		integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-	
 	<!-- Includ no header by @Luiz-->
 	<?php include './components/header/header.php';?>
 	<!-- Includ no body by @L9c25 -->
