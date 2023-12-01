@@ -13,7 +13,6 @@
     --Font-SemiBold: 600;
     --Font-Bold: 700;
 }
-
 #top-header{
     /* posição */
     position: fixed;
@@ -21,6 +20,7 @@
         text-align: center;    
         height: 15px;
         line-height: 15px;
+        z-index: 2;
     /* plano de fundo */
     background-color: #FFD600;
     /*--font--*/
@@ -34,6 +34,7 @@
         width: 100%;
         height: 100px;
         margin-top: 15px;
+        z-index: 2;
     /* plano de fundo */
     background-color: #2E3191;
 
@@ -48,6 +49,7 @@
         width: 100%;
         height: 28px;
         margin-top: 115px;
+        z-index: 2;
     /* plano de fundo */
     background-color: #222137;
     /* fonte */
