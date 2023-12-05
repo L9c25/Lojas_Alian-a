@@ -1,3 +1,8 @@
+<?php
+require "./config/connect.php";
+require "./controllers/prodController.php";
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
