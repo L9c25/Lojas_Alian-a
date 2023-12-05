@@ -32,6 +32,7 @@ body {
     background: #16009C;
     border-radius: 20px;
     margin: 1%;
+    overflow: hidden;
 }
 
 .sala {
@@ -40,6 +41,8 @@ body {
     border-radius: 20px;
     margin: 1%;
     display: flex;
+    overflow: hidden;
+
 }
 
 .cozinha {
@@ -48,6 +51,8 @@ body {
     background-color: rgba(85, 85, 85, 1);
     border-radius: 20px;
     margin: 1%;
+    overflow: hidden;
+
 }
 
 /* botão que funciona para banheiro e cozinha */
@@ -327,7 +332,7 @@ div .avaliacoes::after {
 }
 
 div .recomend {
-    width: 19%;
+    width: 20%;
     background-color: rgb(217, 217, 217);
     padding: 1.5%;
     align-items: center;
@@ -356,8 +361,8 @@ div .coment_viwer {
     color: #333;
 }
 
- .formulario-overlay {
-    z-index: 1; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa */
+.formulario-overlay {
+    z-index: 1;
     display: none;
     position: fixed;
     top: 0;
@@ -378,20 +383,31 @@ div .coment_viwer {
 }
 
 .fechar {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    border-radius: 50px;
+    background-color: #3a3737;
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 20px;
     cursor: pointer;
+    color: white;
 }
 
 .estrelas {
+    margin-bottom: 1%;
+    justify-content: center;
     display: flex;
     cursor: pointer;
 }
 
 .estrela {
-    font-size: 25px;
+
+    font-size: 35px;
     margin-right: 5px;
     color: #ccc;
     transition: color 0.3s;
@@ -409,8 +425,9 @@ input[type="text"] {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    
+
 }
+
 textarea {
     width: 100%;
     padding: 10px;
@@ -418,13 +435,15 @@ textarea {
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 4px;
-    height: 100px; /* Defina a altura desejada aqui */
-    overflow-y:auto;
-    resize: none; /*retirando o pinguelo do textarea*/
+    height: 100px;
+    overflow-y: auto;
+    resize: none;
 }
+
 textarea:focus {
-    outline: none; /* Remove a borda pretona de foco */
+    outline: none;
 }
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -435,7 +454,6 @@ form button:hover {
     background-color: #45a049;
 }
 
-/* container da nota geral */
 div .nota_text {
     background-color: rgba(218, 165, 32, 0.733);
     border-radius: 10px 10px 0px 0px;
@@ -468,9 +486,8 @@ div .geral_nota {
     box-shadow: 0 6px 5px rgba(0, 0, 0, 0.192);
 }
 
-/* filtragem com estrela e barrinha de porcentagem */
 div .filtro {
-    z-index: 2; /* AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
+    z-index: 2;
     text-decoration: none;
     text-align: left;
     margin-top: 15%;
@@ -492,7 +509,6 @@ div .filtro {
     color: #f39c12;
 }
 
-/* barrinnha de porcentagem de cada estrela */
 .progress-barrinha5 {
     width: 75%;
     background-color: #f1f1f1;
@@ -598,7 +614,6 @@ div .filtro {
     border-radius: 17px;
 }
 
-/* comentario dos usuarios no produto */
 div .ava h4 {
     font-size: 99%;
     margin: 5% 0;
@@ -607,11 +622,13 @@ div .ava h4 {
 #comentarios {
     margin-top: 20px;
     clear: both;
+    border: none;
+    margin: none;
 }
 
 .comentario {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+    margin-bottom: 1%;
+
 }
 
 .comentario strong {
@@ -622,9 +639,7 @@ div .ava h4 {
     display: none;
 }
 
-/* barra de procentagem */
 .clicavél_star {
-    /* width: 15%; */
     text-decoration: none;
     border: 1px solid black;
     border-radius: 10px;
@@ -654,12 +669,11 @@ div .ava h4 {
     position: static;
 }
 
-/* div de recomendação de produto */
 div .recomendacao_sim {
     width: 40%;
     background-color: #45a049;
     color: white;
-    padding: 0% 5%;
+    padding: 0% 6%;
     font-size: 15px;
 }
 
@@ -674,9 +688,9 @@ div .recomendacao_nao {
     width: 40%;
     background-color: #871E1E;
     color: white;
-    padding: 0% 5%;
+    padding: 0% 6%;
     font-size: 15px;
-    margin-left: 10%;
+    margin-left: 7%;
 }
 
 div .recomedacao_lado {
@@ -685,14 +699,17 @@ div .recomedacao_lado {
     display: flex;
 }
 
-/* container da imagem e comentário do usuario */
 div .coment_viwer {
     margin-left: 2%;
     width: 75%;
 }
 
-.comment-container {
+.comment-container_bottom {
     margin-bottom: 1%;
+    border: none;
+}
+
+.comment-container {
     background-color: rgba(217, 217, 217, 1);
     border: 1px solid #ddd;
     padding: 10px;
@@ -725,27 +742,97 @@ div .coment_viwer {
 
 .star-rating {
     color: #ffd700;
-    /* Cor amarela para estrelas */
 }
 
 .comment-text {
     font-size: 14px;
-    padding: 2% 10%;
+    padding: 2% 5%;
     background-color: white;
     border-radius: 17px;
     word-wrap: break-word;
-
 }
 
 .like-button {
     background-color: #3498db;
-    /* Cor azul para o botão de curtir */
     color: #fff;
-    /* Cor do texto no botão */
     padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
-/* testando design */
 
+.custom-input-container {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+.custom-input-container input[type="file"] {
+    width: 100%;
+    height: 100%;
+    font-size: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+    margin-bottom: 1%;
+}
+
+.custom-input-container label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nome {
+    border-radius: 10px;
+}
+
+#nome:focus {
+    outline: none;
+    box-shadow: 0 0 0 0 transparent;
+    background-color: #fff;
+}
+
+#comentario {
+    border-radius: 10px;
+}
+
+.star_style_lado {
+    align-items: center;
+    justify-content: center;
+}
+
+#imagem-label {
+    background-color: rgb(226, 226, 9);
+}
+
+#imagem-label.escolhido {
+    background-color: #45a049;
+}
+
+@media (max-width: 950px) {
+    .lado {
+        display: none;
+    }
+
+    .sala img,.cozinha img, .banheiro img {
+        width: 100%;
+        height: 2%;
+    }
+    .body2{
+        margin: 0%;
+    }
+    .recomendacao_nao p ,.recomendacao_sim p{
+        display: none;
+    }
+    .recomendacao_nao h3 ,.recomendacao_sim h3{
+        width: 100%;
+    }
+    .custom-button{
+        display: none;
+    }
+}

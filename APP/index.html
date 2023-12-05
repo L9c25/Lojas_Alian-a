@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lojas Allianças</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
@@ -17,7 +17,7 @@
             <a href="#">
                 <div class="banheiro">
 
-                    <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40 (1).png" alt="Toalha Branca" width="50%">
+                    <img src="Assets/toalha.png" alt="Toalha Branca" width="150px">
 
                     <div class="lado">
                         <h1>Banheiro</h1>
@@ -29,7 +29,7 @@
             </a>
             <a href="#">
                 <div class="sala">
-                    <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40 (2).png" alt="Sofá Verde" width="50%">
+                    <img src="Assets/sofá.png" alt="Sofá Verde" width="150px">
                     <div class="lado">
                         <h1>Sala</h1>
                         <div class="botão2">
@@ -41,7 +41,7 @@
             <a href="#">
                 <div class="cozinha">
 
-                    <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40_resized.png" alt="Fogão" width="50%">
+                    <img src="Assets/fogão.png" alt="Fogão" width="150px">
 
                     <div class="lado">
                         <h1>Cozinha</h1>
@@ -205,27 +205,37 @@
                     <div class="formulario-overlay" id="formularioOverlay">
                         <div class="formulario-container">
                             <span class="fechar" onclick="fecharFormulario()">&times;</span>
-                            <h3>Deixe sua Avaliação</h3>
+                            <h3>Faça a sua Avaliação</h3>
                             <!--formulário que será escondido -->
                             <form>
-                                <label for="imagem">Adicionar Imagem:</label>
-                                <input type="file" id="imagem" accept="image/*">
-                                <label for="nome">Nome:</label>
-                                <input type="text" id="nome" required>
-
-                                <label for="avaliacao">Avaliação:</label>
-                                <div class="estrelas" onclick="selecionarEstrelas(event)">
-                                    <span class="estrela" data-valor="1">&#9733;</span>
-                                    <span class="estrela" data-valor="2">&#9733;</span>
-                                    <span class="estrela" data-valor="3">&#9733;</span>
-                                    <span class="estrela" data-valor="4">&#9733;</span>
-                                    <span class="estrela" data-valor="5">&#9733;</span>
+                                
+                                <!-- Contêiner opcional do input de imagem -->
+                                <div class="custom-input-container">
+                                    <!-- Input de imagem -->
+                                    <input type="file" id="imagem" accept="image/*">
+                                    <!-- Adicione um rótulo ou ícone personalizado, se desejar -->
+                                    <label for="imagem" id="imagem-label"><b>Escolha uma imagem</b></label>
+                                    
+                                </div>
+                                <div>
+                                    <input type="text" id="nome" placeholder="Escreva seu nome completo" required>
                                 </div>
 
-                                <input type="number" id="avaliacao" min="1" max="5" style="display: none" required>
+                                <div class="star_style_lado">
+                                
+                                    <div class="estrelas" onclick="selecionarEstrelas(event)">
+                                        <span class="estrela" data-valor="1">&#9733;</span>
+                                        <span class="estrela" data-valor="2">&#9733;</span>
+                                        <span class="estrela" data-valor="3">&#9733;</span>
+                                        <span class="estrela" data-valor="4">&#9733;</span>
+                                        <span class="estrela" data-valor="5">&#9733;</span>
+                                    </div>
 
-                                <label for="comentario">Comentário:</label>
-                                <textarea id="comentario" rows="4" required></textarea>
+                                    <input type="number" id="avaliacao" min="1" max="5" style="display: none" required>
+                                </div>
+
+                                <textarea id="comentario" rows="4" required
+                                    placeholder="Escreva o seu cometario"></textarea>
 
 
                                 <button type="button" class="coment" onclick="adicionarComentario()">Enviar
@@ -309,100 +319,117 @@
                         <div class="recomedacao_lado">
                             <div class="recomendacao_sim">
                                 <h3>99%</h3>
-                                <p>dos clientes recomendam esse produto.</p>
+                                <p>recomendam esse produto.</p>
                             </div>
                             <div class="recomendacao_nao">
                                 <h3>1%</h3>
-                                <p>dos clientes não recomendam esse produto.</p>
+                                <p>Não recomendam esse produto.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <!--comentário fixo de exemplo-->
                 <div class="coment_viwer">
 
-                    <div class="comment-container"id="comentarios">
-                       
+
+                    <div class="comment-container_bottom" id="comentarios">
+
                     </div>
-                    
+
 
 
                     <!-- pessoa 1 -->
-                    <div class="comment-container">
-                        <div class="user-info">
-                            <!--imagem do perfil do usuario-->
-                            <img class="user-photo" src="Assets/valéria.png" alt="Foto de perfil">
-                            <div class="name_star">
-                                <div class="user-name">valéria Almeida</div>
-                                <!--avaliação em estrela-->
-                                <div class="star-rating">★★★★★</div>
+                    <div class="comment-container_bottom">
+                        <div class="comment-container">
+                            <div class="user-info">
+                                <!--imagem do perfil do usuario-->
+                                <img class="user-photo" src="Assets/valéria.png" alt="Foto de perfil">
+                                <div class="name_star">
+                                    <div class="user-name">valéria Almeida</div>
+                                    <!--avaliação em estrela-->
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                                <button class="like-button">👍</button>
                             </div>
-                            <button class="like-button">👍</button>
-                        </div>
-                        <!--aonde vai ficar o comentário do usuario-->
-                        <div class="comment-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
-                            consequat. Duis vel condimentum quam.
+                            <!--aonde vai ficar o comentário do usuario-->
+                            <div class="comment-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit
+                                fringilla
+                                consequat. Duis vel condimentum quam.
+                            </div>
                         </div>
                     </div>
                     <!-- pessoa 2 -->
-                    <div class="comment-container">
-                        <div class="user-info">
-                            <img class="user-photo" src="Assets/Agatha-Nunes.png" alt="Foto de perfil">
-                            <div class="name_star">
-                                <div class="user-name">Agatha Nunes</div>
-                                <div class="star-rating">★★★★★</div>
+                    <div class="comment-container_bottom">
+                        <div class="comment-container">
+                            <div class="user-info">
+                                <img class="user-photo" src="Assets/Agatha-Nunes.png" alt="Foto de perfil">
+                                <div class="name_star">
+                                    <div class="user-name">Agatha Nunes</div>
+                                    <div class="star-rating">★★★★</div>
+                                </div>
+                                <button class="like-button">👍</button>
                             </div>
-                            <button class="like-button">👍</button>
-                        </div>
-                        <div class="comment-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
-                            consequat. Duis vel condimentum quam.
+                            <div class="comment-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit
+                                fringilla
+                                consequat. Duis vel condimentum quam.
+                            </div>
                         </div>
                     </div>
                     <!-- pessoa 3 -->
-                    <div class="comment-container">
-                        <div class="user-info">
-                            <img class="user-photo" src="Assets/Ygona Moura.png" alt="Foto de perfil">
-                            <div class="name_star">
-                                <div class="user-name">Ygona Moura</div>
-                                <div class="star-rating">★★★★★</div>
+                    <div class="comment-container_bottom">
+                        <div class="comment-container">
+                            <div class="user-info">
+                                <img class="user-photo" src="Assets/Ygona Moura.png" alt="Foto de perfil">
+                                <div class="name_star">
+                                    <div class="user-name">Ygona Moura</div>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                                <button class="like-button">👍</button>
                             </div>
-                            <button class="like-button">👍</button>
-                        </div>
-                        <div class="comment-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
-                            consequat. Duis vel condimentum quam.
+                            <div class="comment-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit
+                                fringilla
+                                consequat. Duis vel condimentum quam.
+                            </div>
                         </div>
                     </div>
                     <!-- pessoa 4 -->
-                    <div class="comment-container">
-                        <div class="user-info">
-                            <img class="user-photo" src="Assets/luiz.png" alt="Foto de perfil">
-                            <div class="name_star">
-                                <div class="user-name">Luiz Augusto</div>
-                                <div class="star-rating">★★★★★</div>
+                    <div class="comment-container_bottom">
+                        <div class="comment-container">
+                            <div class="user-info">
+                                <img class="user-photo" src="Assets/luiz.png" alt="Foto de perfil">
+                                <div class="name_star">
+                                    <div class="user-name">Luiz Augusto</div>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                                <button class="like-button">👍</button>
                             </div>
-                            <button class="like-button">👍</button>
-                        </div>
-                        <div class="comment-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
-                            consequat. Duis vel condimentum quam.
+                            <div class="comment-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit
+                                fringilla
+                                consequat. Duis vel condimentum quam.
+                            </div>
                         </div>
                     </div>
                     <!-- pessoa 5 -->
-                    <div class="comment-container">
-                        <div class="user-info">
-                            <img class="user-photo" src="Assets/MAnoel-Gomes.png" alt="Foto de perfil">
-                            <div class="name_star">
-                                <div class="user-name">Manoel Gomes</div>
-                                <div class="star-rating">★★★★★</div>
+                    <div class="comment-container_bottom">
+                        <div class="comment-container">
+                            <div class="user-info">
+                                <img class="user-photo" src="Assets/MAnoel-Gomes.png" alt="Foto de perfil">
+                                <div class="name_star">
+                                    <div class="user-name">Manoel Gomes</div>
+                                    <div class="star-rating">★★★★★</div>
+                                </div>
+                                <button class="like-button">👍</button>
                             </div>
-                            <button class="like-button">👍</button>
-                        </div>
-                        <div class="comment-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit fringilla
-                            consequat. Duis vel condimentum quam.
+                            <div class="comment-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in justo ut elit
+                                fringilla
+                                consequat. Duis vel condimentum quam.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -414,4 +441,4 @@
 </body>
 
 </html>
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
