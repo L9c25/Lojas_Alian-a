@@ -126,6 +126,9 @@ a {
     display: flex;
     flex-direction: row;
     font-size:small;
+    margin-left: 4%;
+    height: 24px;
+
 }
 
 @media (max-width: 768px) {
