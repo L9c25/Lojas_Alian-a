@@ -40,7 +40,7 @@ body {
 	margin: 15px 0px 20px 8%;
 }
 
-.img-emoji{
+.img-emoji {
 	display: flex;
 	width: 30px;
 	height: 30px;
@@ -49,14 +49,16 @@ body {
 	background-image: url("../Assets/Emojis/Emoji_1.png");
 	background-size: cover;
 }
-.carrosel{
+
+.carrosel {
 	display: flex;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
 	/* background-color: blue; */
 }
-.swiper-slider-products{
+
+.swiper-slider-products {
 	display: flex !important;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -65,14 +67,14 @@ body {
 	/* background-color: red; */
 }
 
-.product{
+.product {
 	width: 278px;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 }
 
-.info-product{
+.info-product {
 	width: 278px;
 	margin-top: 20px;
 }
@@ -100,12 +102,12 @@ body {
 	justify-content: center;
 }
 
-.rating{
+.rating {
 	display: flex;
 	float: left;
 	margin-right: 20px;
 	font-size: 25px;
-	color: rgb(255,226,0);
+	color: rgb(255, 226, 0);
 	margin: 7px 10px 7px 0px;
 }
 
@@ -114,41 +116,102 @@ body {
 	font-weight: 500;
 	text-align: center;
 }
-.descount-price-product{
+
+.descount-price-product {
 	display: flex;
 	align-items: end;
 	justify-content: center;
 	margin-top: 15px;
 }
-.descount-price{
-	text-align:	center;
+
+.descount-price {
+	text-align: center;
 	font-size: 25px;
 	font-weight: 500;
 	margin-right: 7px;
 }
 
-.text-info{
+.text-info {
 	color: #7e7e7e;
 	font-weight: 500;
 }
+
 /* CSS by Sarah */
-nav {
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-  
-  
-  #purchaseForm{
-	display: flex;
+.category {
 	width: 90%;
+}
+
+.formula {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+	height: 14em;
+	background-color: white;
+}
+
+.retangle {
+	display: inline-flex;
+	width: 12.2em;
+	height: 7px;
+	margin-bottom: 10px;
+	border-radius: 7px;
+	background-color: #16057e;
+}
+
+.retangle2 {
+	display: inline-flex;
+	width: 90%;
+	height: 3px;
+	border-radius: 8px;
+	margin-bottom: 6px;
+	background-color: #62626264;
+}
+
+.retancle4{
+	display: inline-flex;
+	width: 8em;
+	height: 2px;
+	border-radius: 8px;
+	margin-bottom: 6px;
+	background-color: #1a1a1ab4;
+}
+
+nav {
+	width: 90%;
+	display: flex;
+	align-items: center;
+	margin-top: 30px;
+	justify-content: space-between;
+}
+
+.filters{
+	display: flex;
+	flex-direction: row;
+	gap: 30px;
+}
+
+#purchaseForm {
+	display: flex;
+	width: 56%;
 	gap: 30px;
 	/* background-color: red; */
-  }
-  
-  .filter {
+}
+
+.filter {
 	padding: 6px;
-  
-	
-  }
+	padding-right: 15px;
+	width: 10em;
+}
+
+#filter1{
+	box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.itensfilter{
+	display: flex;
+	flex-direction: column;
+}
