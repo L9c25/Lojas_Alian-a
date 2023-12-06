@@ -5,17 +5,21 @@ try {
     require "./controllers/prodController.php";
 
 } catch (Exception $e) {
-    echo "". $e->getMessage() ."press F";
-}
+    echo "" . $e->getMessage() . "press F";
+}    
 $ID = $_GET["id"];
 $d = new daoMysql($pdo);
 $produto = $d->listar();
 $produto = $produto[$ID - 1];
-echo($ID);
+// echo($ID);
 ?>
+
 <head>
-    <title><?php echo($produto->getNome())?></title>
+    <title>
+        <?php echo ($produto->getNome()) ?>
+    </title>
 </head>
+
 <body>
     <link rel="stylesheet" href="./components/produto/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -125,8 +129,12 @@ echo($ID);
                     </div>
                     <!--preço do produto-->
                     <div>
-                        <div class="preçopromo">de <?php echo($produto->getPreco())?></div>
-                        <div class="preçopromo2"> Por <?php echo($produto->getPreco() * 0.9)?></div>
+                        <div class="preçopromo">de
+                            <?php echo ($produto->getPreco()) ?>
+                        </div>
+                        <div class="preçopromo2"> Por
+                            <?php echo ($produto->getPreco() * 0.9) ?>
+                        </div>
                     </div>
                     <!--otões de interação, de adicionar a ista,whatsapp e frete-->
                     <div class="botão_prod">

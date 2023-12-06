@@ -90,7 +90,7 @@
                         <li class="options-header"><a href="./index.php">Home</a></li>
                         <li class="options-header"><a href="">Produtos</a></li>
                         <li class="options-header"><a href="">Movéis</a></li>
-                        <li class="options-header"><a href="">Eletrodomésticos</a></li>
+                        <li class="options-header"><a href="./eletro.php">Eletrodomésticos</a></li>
                         <li class="options-header"><a href="">Informática</a></li>
                         <li class="options-header"><a href="">Opção</a></li>
                     </ul>
