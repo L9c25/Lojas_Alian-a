@@ -1,32 +1,38 @@
 <?php
-require "./config/connect.php";
-require "./controllers/prodController.php";
+try {
+    $root = $_SERVER['DOCUMENT_ROOT'];
+    require $root . "/APP/config/connect.php";
+    require "./controllers/prodController.php";
+
+} catch (Exception $e) {
+    echo "". $e->getMessage() ."press F";
+}
+$ID = $_GET["id"];
+$d = new daoMysql($pdo);
+$produto = $d->listar();
+$produto = $produto[$ID - 1];
+echo($ID);
 ?>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojas Allianças</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    <title><?php echo($produto->getNome())?></title>
 </head>
-
 <body>
+    <link rel="stylesheet" href="./components/produto/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <!-- fundo com o tom cinza que fica atras do body2 -->
     <div class="fundo">
-        <div class="aparente"> <!--div com banheiro, sala e cozinha do topo do site -->
+        <div class="aparente">
+            <!--div com banheiro, sala e cozinha do topo do site -->
             <a href="#">
                 <div class="banheiro">
 
-                    <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40 (1).png" alt="Toalha Branca" width="50%">
+                    <img src="./components/produto/Assets/WhatsApp Image 2023-11-17 at 00.59.40 (1).png"
+                        alt="Toalha Branca" width="50%">
 
                     <div class="lado">
                         <h1>Banheiro</h1>
-                        <div class="botão"> <!--este botão funciona tmbém para o botão da div cozinha-->
+                        <div class="botão">
+                            <!--este botão funciona tmbém para o botão da div cozinha-->
                             <h4>Comprar</h4>
                         </div>
                     </div>
@@ -34,7 +40,8 @@ require "./controllers/prodController.php";
             </a>
             <a href="#">
                 <div class="sala">
-                    <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40 (2).png" alt="Sofá Verde" width="50%">
+                    <img src="./components/produto/Assets/WhatsApp Image 2023-11-17 at 00.59.40 (2).png"
+                        alt="Sofá Verde" width="50%">
                     <div class="lado">
                         <h1>Sala</h1>
                         <div class="botão2">
@@ -46,7 +53,8 @@ require "./controllers/prodController.php";
             <a href="#">
                 <div class="cozinha">
 
-                    <img src="Assets/WhatsApp Image 2023-11-17 at 00.59.40_resized.png" alt="Fogão" width="50%">
+                    <img src="./components/produto/Assets/WhatsApp Image 2023-11-17 at 00.59.40_resized.png" alt="Fogão"
+                        width="50%">
 
                     <div class="lado">
                         <h1>Cozinha</h1>
@@ -65,46 +73,51 @@ require "./controllers/prodController.php";
             <div class="tudo">
                 <div class="ladolado">
                     <!-- scripts que fazem imagens mudar de lugar-->
-                    <div class="variação1" onclick="mudarImagem('Assets/geladeira.png')">
-                        <img src="Assets/geladeira.png" alt="Produto" width="100%">
+                    <div class="variação1" onclick="mudarImagem('./components/produto/Assets/geladeira.png')">
+                        <img src="./components/produto/Assets/geladeira.png" alt="Produto" width="100%">
                     </div>
-                    <div class="variação2" onclick="mudarImagem('Assets/geladeiraa_resized.png')">
-                        <img src="Assets/geladeiraa_resized.png" alt="Produto" width="100%">
+                    <div class="variação2" onclick="mudarImagem('./components/produto/Assets/geladeiraa_resized.png')">
+                        <img src="./components/produto/Assets/geladeiraa_resized.png" alt="Produto" width="100%">
                     </div>
 
-                    <div class="variação3" onclick="mudarImagem('Assets/semprod_resized.png')">
-                        <img src="Assets/semprod_resized.png" alt="Produto" width="100%">
+                    <div class="variação3" onclick="mudarImagem('./components/produto/Assets/semprod_resized.png')">
+                        <img src="./components/produto/Assets/semprod_resized.png" alt="Produto" width="100%">
                     </div>
-                    <div class="variação4" onclick="mudarImagem('Assets/lados_resized.png')">
-                        <img src="Assets/lados_resized.png" alt="Produto" width="100%">
+                    <div class="variação4" onclick="mudarImagem('./components/produto/Assets/lados_resized.png')">
+                        <img src="./components/produto/Assets/lados_resized.png" alt="Produto" width="100%">
                     </div>
                 </div>
                 <!-- imagem principal quando for carregar o site-->
                 <div class="Imagem_inicial">
-                    <img id="imagemPrincipal" src="Assets/geladeira.png" alt="Produto" width="70%" class="imagem1">
+                    <img id="imagemPrincipal" src="./components/produto/Assets/geladeira.png" alt="Produto" width="70%"
+                        class="imagem1">
                 </div>
                 <div class="preços_produto">
                     <div>
                         <h1>Cores:</h1>
                     </div>
-                    <div class="cores"> <!-- variação do produto com cor-->
+                    <div class="cores">
+                        <!-- variação do produto com cor-->
                         <div class="prod1">
                             <a href="#">
-                                <img src="Assets/geladeira - Azul.png" alt="gelradeia 4 Portas" width="100%">
+                                <img src="./components/produto/Assets/geladeira - Azul.png" alt="gelradeia 4 Portas"
+                                    width="100%">
 
                                 <p>Azul</p>
                             </a>
                         </div>
                         <div class="prod2">
                             <a href="#">
-                                <img src="Assets/geladeira.png" alt="gelradeia 4 Portas" width="100%">
+                                <img src="./components/produto/Assets/geladeira.png" alt="gelradeia 4 Portas"
+                                    width="100%">
 
                                 <p>Prata</p>
                             </a>
                         </div>
                         <div class="prod3">
                             <a href="#">
-                                <img src="Assets/geladeira - Rosa.png" alt="gelradeia 4 Portas" width="100%">
+                                <img src="./components/produto/Assets/geladeira - Rosa.png" alt="gelradeia 4 Portas"
+                                    width="100%">
 
                                 <p>Rosa</p>
                             </a>
@@ -112,15 +125,16 @@ require "./controllers/prodController.php";
                     </div>
                     <!--preço do produto-->
                     <div>
-                        <div class="preçopromo">de R$ 2.947,00</div>
-                        <div class="preçopromo2"> Por R$ 2.500,00</div>
+                        <div class="preçopromo">de <?php echo($produto->getPreco())?></div>
+                        <div class="preçopromo2"> Por <?php echo($produto->getPreco() * 0.9)?></div>
                     </div>
                     <!--otões de interação, de adicionar a ista,whatsapp e frete-->
                     <div class="botão_prod">
                         <div class="desejo">
                             <a href="#" class="bot_clicavel">
                                 <div class="icon_prod1" width="100%">
-                                    <i class="fas fa-heart" style="color: red;"></i><!--Icone do coração-->
+                                    <i class="fas fa-heart" style="color: red;"></i>
+                                    <!--Icone do coração-->
                                 </div>
                                 <div class="t_icon1">
                                     <p>Lista de desejos</p>
@@ -130,8 +144,8 @@ require "./controllers/prodController.php";
                         <div class="WhatsApp">
                             <a href="#" class="bot_clicavel2">
                                 <div class="icon_prod2">
-                                    <i class="fab fa-whatsapp"
-                                        style="color: white;"></i><!-- Ícone de carrinho do whatsApp-->
+                                    <i class="fab fa-whatsapp" style="color: white;"></i>
+                                    <!-- Ícone de carrinho do whatsApp-->
 
                                 </div>
                                 <div class="t_icon2">
@@ -142,8 +156,8 @@ require "./controllers/prodController.php";
                         <div class="localização">
                             <a href="#" class="bot_clicavel3">
                                 <div class="icon_prod3">
-                                    <i class="fas fa-map-marker-alt"
-                                        style="color: #4285F4;"></i><!-- Ícone de localização -->
+                                    <i class="fas fa-map-marker-alt" style="color: #4285F4;"></i>
+                                    <!-- Ícone de localização -->
                                 </div>
                                 <div class="t_icon3">
                                     <p>Calcular frete</p>
@@ -212,7 +226,7 @@ require "./controllers/prodController.php";
                             <span class="fechar" onclick="fecharFormulario()">&times;</span>
                             <h3>Deixe sua Avaliação</h3>
                             <!--formulário que será escondido -->
-                            <form>
+                            <form class="formlindo">
                                 <label for="imagem">Adicionar Imagem:</label>
                                 <input type="file" id="imagem" accept="image/*">
                                 <label for="nome">Nome:</label>
@@ -256,7 +270,7 @@ require "./controllers/prodController.php";
                     </div>
                     <!-- filtro de avaliações por estrela-->
                     <div class="filtro">
-                        <h4>filtrar por:</h4>
+                        <>filtrar por:</>
                         <hr>
                         <!-- botão com as estrelas w barrinha de porcentagem-->
                         <!--ops: as divs se repetem e mudam só a informação-->
@@ -326,17 +340,17 @@ require "./controllers/prodController.php";
                 <!--comentário fixo de exemplo-->
                 <div class="coment_viwer">
 
-                    <div class="comment-container"id="comentarios">
-                       
+                    <div class="comment-container" id="comentarios">
+
                     </div>
-                    
+
 
 
                     <!-- pessoa 1 -->
                     <div class="comment-container">
                         <div class="user-info">
                             <!--imagem do perfil do usuario-->
-                            <img class="user-photo" src="Assets/valéria.png" alt="Foto de perfil">
+                            <img class="user-photo" src="./components/produto/Assets/valéria.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">valéria Almeida</div>
                                 <!--avaliação em estrela-->
@@ -353,7 +367,8 @@ require "./controllers/prodController.php";
                     <!-- pessoa 2 -->
                     <div class="comment-container">
                         <div class="user-info">
-                            <img class="user-photo" src="Assets/Agatha-Nunes.png" alt="Foto de perfil">
+                            <img class="user-photo" src="./components/produto/Assets/Agatha-Nunes.png"
+                                alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Agatha Nunes</div>
                                 <div class="star-rating">★★★★★</div>
@@ -368,7 +383,8 @@ require "./controllers/prodController.php";
                     <!-- pessoa 3 -->
                     <div class="comment-container">
                         <div class="user-info">
-                            <img class="user-photo" src="Assets/Ygona Moura.png" alt="Foto de perfil">
+                            <img class="user-photo" src="./components/produto/Assets/Ygona Moura.png"
+                                alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Ygona Moura</div>
                                 <div class="star-rating">★★★★★</div>
@@ -383,7 +399,7 @@ require "./controllers/prodController.php";
                     <!-- pessoa 4 -->
                     <div class="comment-container">
                         <div class="user-info">
-                            <img class="user-photo" src="Assets/luiz.png" alt="Foto de perfil">
+                            <img class="user-photo" src="./components/produto/Assets/luiz.png" alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Luiz Augusto</div>
                                 <div class="star-rating">★★★★★</div>
@@ -398,7 +414,8 @@ require "./controllers/prodController.php";
                     <!-- pessoa 5 -->
                     <div class="comment-container">
                         <div class="user-info">
-                            <img class="user-photo" src="Assets/MAnoel-Gomes.png" alt="Foto de perfil">
+                            <img class="user-photo" src="./components/produto/Assets/MAnoel-Gomes.png"
+                                alt="Foto de perfil">
                             <div class="name_star">
                                 <div class="user-name">Manoel Gomes</div>
                                 <div class="star-rating">★★★★★</div>
@@ -414,9 +431,8 @@ require "./controllers/prodController.php";
             </div>
         </div>
     </div>
-    </div>
 
+    <script src="script.js">
+        // console.log("test")
+    </script>
 </body>
-
-</html>
-<script src="script.js"></script>

@@ -1,5 +1,5 @@
 <header>
-       <link rel="stylesheet" href="./components/header/header.css?">
+       <link rel="stylesheet" href="./components/header/header.css">
        <div id="top-header">
             <p>Loja De Eletrodomésticos em Barreiras Centro, Barreiras - BA</p>
        </div>
@@ -87,11 +87,8 @@
             <div id="nav-base-header">
                 <nav>
                     <ul>
-                       
-                        <a href="./components/body/body.php">
-                            <li class="options-header">Home</li>
-                        </a>
-                        <li class="options-header"><a href="./components/produto/index.php">Produtos</a></li>
+                        <li class="options-header"><a href="./index.php">Home</a></li>
+                        <li class="options-header"><a href="">Produtos</a></li>
                         <li class="options-header"><a href="">Movéis</a></li>
                         <li class="options-header"><a href="">Eletrodomésticos</a></li>
                         <li class="options-header"><a href="">Informática</a></li>
@@ -100,4 +97,6 @@
                 </nav>
             </div>
        </div>
+
+
 </header>

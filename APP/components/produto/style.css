@@ -1,12 +1,5 @@
-* {
-    font-family: 'Segoe UI', tahoma, Geneva, verdana, sans-serif;
-}
-
 /* fundo do site */
-body {
-    margin-left: 0%;
-    margin-right: 0%;
-}
+
 
 .fundo {
     background-color: rgb(217, 217, 217);
@@ -16,14 +9,17 @@ body {
     background-color: white;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 0%;
+
 }
 
 /* Parte que mostra seções em cima do produto */
 .aparente {
+    display: block;
     background-color: black;
-    width: 96%;
+    width: 100%;
+    height: 300px;
     padding: 2%;
+    margin-top: px;
 }
 
 .banheiro {
@@ -288,13 +284,13 @@ h4 {
     text-align: center;
 }
 
-table.distancia {
+.distancia {
     border-collapse: collapse;
     width: 100%;
 }
 
 .distancia th,
-td {
+.distancia td {
     text-align: left;
 
 }
@@ -402,7 +398,7 @@ div .coment_viwer {
     color: #FFD700;
 }
 
-input[type="text"] {
+.formlindo input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -411,7 +407,7 @@ input[type="text"] {
     border-radius: 4px;
     
 }
-textarea {
+.formlindo textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -422,16 +418,16 @@ textarea {
     overflow-y:auto;
     resize: none; /*retirando o pinguelo do textarea*/
 }
-textarea:focus {
+.formlindo textarea:focus {
     outline: none; /* Remove a borda pretona de foco */
 }
-label {
+.formlindo label {
     display: block;
     margin-bottom: 5px;
     color: black;
 }
 
-form button:hover {
+.formlindo  button:hover {
     background-color: #45a049;
 }
 
@@ -445,7 +441,7 @@ div .nota_text h3 {
     margin-bottom: 0%;
 }
 
-div.nota_coment {
+div .nota_coment {
     padding-bottom: 5%;
     background-color: rgba(217, 217, 217, 0.28);
 }

@@ -1,5 +1,5 @@
 <?php 
-session_start();
+
 
 $host = 'localhost';
 $banco = 'alianca';

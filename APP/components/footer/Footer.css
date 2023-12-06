@@ -175,3 +175,118 @@
     width: 20px;
     margin-right: 10px;
 }
+
+#container-endereco-contato, #atendimento-responsivo{
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    #section-endereco {
+        display: none;
+    }
+
+    #contato{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #contato-responsivo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #atendimento {
+        display: none;
+        margin: 20px;
+    }
+
+    #atendimento-responsivo {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin: 20px;
+    }
+
+    #container-endereco-contato {
+        display: flex;
+        width: 100%;
+    }
+
+    #contato-responsivo{
+        width: 50%;
+    }
+
+    #section-endereco-responsivo {
+        width: 50%;
+    }
+
+    #container-footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .atendimento {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    #container-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px;
+    }
+
+    #container-endereco-contato {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sections {
+        margin: 0px;
+    }
+
+    #contato-responsivo {
+        display: flex;
+        border-radius: 10px;
+        color: white;
+    }
+    
+    #atendimento-responsivo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 0px;
+    }
+
+    #card1-atendimento, #card2-atendimento, #section-endereco-responsive, #contato-responsivo {
+        width: 90%;
+        margin: 10px 0px;
+        padding: 0;
+
+    }
+
+    #card1-atendimento {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 950px){
+    #svg-formasPag{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    #sec-local {
+        width: 100%;
+    }
+}

@@ -1,3 +1,4 @@
+/* reset do css */
 *{
     margin: 0;
     padding: 0;   
@@ -13,6 +14,10 @@
     --Font-SemiBold: 600;
     --Font-Bold: 700;
 }
+header {
+    height: 143px;
+}
+
 #top-header{
     /* posição */
     position: fixed;
@@ -26,6 +31,7 @@
     /*--font--*/
     font-size: 11px;
         font-weight: var(--Font-SemiBold);
+    top: 0;
 }
 
 #central-header{
@@ -41,6 +47,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 0;
         
 }
 #base-header{
@@ -54,7 +61,8 @@
     background-color: #222137;
     /* fonte */
     font-size: 14px;
-        font-weight: 400
+        font-weight: 400;
+    top: 0;
 }
 
 #nav-base-header nav ul{

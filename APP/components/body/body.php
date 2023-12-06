@@ -22,10 +22,10 @@ require "./controllers/prodController.php";
 						<?php
 						$d = new daoMysql($pdo);
 						$dados = $d->listar();
-						foreach ($dados as $p):
+						foreach($dados as $p):
 							?>
 							<div class="product">
-								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+								<a href="http://localhost:8800/APP/prod.php?id=<?php echo ($p->getId()) ?>" target="_blank">
 									<div class="produc-image" style="background-image:
 										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
 									</div>
@@ -67,10 +67,10 @@ require "./controllers/prodController.php";
 						<?php
 						$d = new daoMysql($pdo);
 						$dados = $d->listar();
-						foreach ($dados as $p):
+						foreach($dados as $p):
 							?>
 							<div class="product">
-								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+							<a href="http://localhost:8800/APP/prod.php?id=<?php echo ($p->getId()) ?>" target="_blank">
 									<div class="produc-image" style="background-image:
 										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
 									</div>
@@ -111,10 +111,10 @@ require "./controllers/prodController.php";
 						<?php
 						$d = new daoMysql($pdo);
 						$dados = $d->listar();
-						foreach ($dados as $p):
+						foreach($dados as $p):
 							?>
 							<div class="product">
-								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+							<a href="http://localhost:8800/APP/prod.php?id=<?php echo ($p->getId()) ?>" target="_blank">
 									<div class="produc-image" style="background-image:
 										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
 									</div>
@@ -156,10 +156,10 @@ require "./controllers/prodController.php";
 						<?php
 						$d = new daoMysql($pdo);
 						$dados = $d->listar();
-						foreach ($dados as $p):
+						foreach($dados as $p):
 							?>
 							<div class="product">
-								<a href="?id=<?php echo($p->getId())?>" target="_blank">
+							<a href="http://localhost:8800/APP/prod.php?id=<?php echo ($p->getId()) ?>" target="_blank">
 									<div class="produc-image" style="background-image:
 										url('./components/body/Assets/img/<?php echo ($p->getImg()) ?>');">
 									</div>
