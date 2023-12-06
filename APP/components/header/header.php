@@ -1,3 +1,6 @@
+<head>
+    <link rel="shortcut icon" href="./components/header/alian.ico" type="image/x-icon">
+</head>
 <header>
        <link rel="stylesheet" href="./components/header/header.css">
        <div id="top-header">
