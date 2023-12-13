@@ -12,14 +12,4 @@ try {
 } catch (Exception $e) {
     die("erro: ".$e->getMessage());
 }
-
-/*$nome = 'nome';
-$email = 'email';
-
-$sql = $pdo->prepare("INSERT into usuario (nome,email) values (:nome,:email)");
-$sql->bindParam(":nome",$nome);
-$sql->bindParam(":email",$email);
-$nome = 'novo nome';
-$sql->execute();*/
-
 ?>

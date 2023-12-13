@@ -32,15 +32,15 @@ class daoMysql implements ProdutoDAO
 	}
 
 	// função de test
-	public function geraJSON()
-	{
-		$sql = $this->pdo->query("SELECT * FROM produto");
-		if ($sql->rowCount() > 0) {
-			$dados = $sql->fetchAll(PDO::FETCH_ASSOC);
-			print json_encode($dados);
-		}
+	// public function geraJSON()
+	// {
+	// 	$sql = $this->pdo->query("SELECT * FROM produto");
+	// 	if ($sql->rowCount() > 0) {
+	// 		$dados = $sql->fetchAll(PDO::FETCH_ASSOC);
+	// 		print json_encode($dados);
+	// 	}
 
-	}
+	// }
 }
 
 ?>

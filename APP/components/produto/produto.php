@@ -72,13 +72,13 @@ $produto = $produto[$ID - 1];
         <!-- fundo da pagina aonde vai conter o corpo do site-->
         <div class="body2">
             <div class="produtonome">
-                <h1>Geladeira Frost Free 443 litros - Inox 110v </h1>
+                <h1><?php echo($produto->getNome())?></h1>
             </div>
             <div class="tudo">
                 <div class="ladolado">
                     <!-- scripts que fazem imagens mudar de lugar-->
-                    <div class="variação1" onclick="mudarImagem('./components/produto/Assets/geladeira.png')">
-                        <img src="./components/produto/Assets/geladeira.png" alt="Produto" width="100%">
+                    <div class="variação1" onclick="mudarImagem('./components/produto/Assets/<?php echo($produto->getImg())?>')">
+                        <img src="./components/produto/Assets/<?php echo($produto->getImg())?>" alt="Produto" width="100%">
                     </div>
                     <div class="variação2" onclick="mudarImagem('./components/produto/Assets/geladeiraa_resized.png')">
                         <img src="./components/produto/Assets/geladeiraa_resized.png" alt="Produto" width="100%">
@@ -93,7 +93,7 @@ $produto = $produto[$ID - 1];
                 </div>
                 <!-- imagem principal quando for carregar o site-->
                 <div class="Imagem_inicial">
-                    <img id="imagemPrincipal" src="./components/produto/Assets/geladeira.png" alt="Produto" width="70%"
+                    <img id="imagemPrincipal" src="./components/produto/Assets/<?php echo($produto->getImg())?>" alt="Produto" width="70%"
                         class="imagem1">
                 </div>
                 <div class="preços_produto">
@@ -440,7 +440,7 @@ $produto = $produto[$ID - 1];
         </div>
     </div>
 
-    <script src="script.js">
+    <script src="./components/produto/script.js">
         // console.log("test")
     </script>
 </body>
